@@ -1,6 +1,8 @@
 #ifndef __CALCULATE_H__
 #define __CALCULATE_H__
 
+#define JACCARD
+
 #include <iostream>
 #include <new>
 #include <math.h>

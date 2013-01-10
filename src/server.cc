@@ -39,7 +39,7 @@ int main(int argc, char **argv){
 		ret = classifier->ExecuteMatchingOnMemory(image_name);
 		if(ret == 0){
 			memset(buf, 0x00, sizeof(buf));
-			snprintf(buf, sizeof(buf), "%d %f", classifier->get_result_(), classifier->get_reliability_());
+			snprintf(buf, sizeof(buf), "%d %.2f", classifier->get_result_(), classifier->get_reliability_());
 			len = write(server->accept_sock, buf, strlen(buf));
 			if(len < 1){
 				perror("write");

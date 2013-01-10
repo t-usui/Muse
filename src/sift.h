@@ -1,7 +1,8 @@
 #ifndef __SIFT_H__
 #define __SIFT_H__
 
-#define NOIMAGEMODE
+// #define IMAGE
+#define DEBUG
 
 #include <stdio.h>
 #include <string>

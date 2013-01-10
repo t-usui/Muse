@@ -134,7 +134,11 @@ namespace muse{
 		similarity = new double[num];
 
 		for(int i=0;i<num;i++){
-			similarity[i] = (deviation_value1[i] + deviation_value2[i] + deviation_value3[i]) / 3;
+			#ifdef JACCARD
+				similarity[i] = floor((deviation_value1[i] + deviation_value2[i] + deviation_value3[i]) / 3) / 100;
+			#else
+				similarity[i] = floor((deviation_value1[i] + deviation_value2[i]) / 2) / 100;
+			#endif
 		}
 
 		return similarity;
